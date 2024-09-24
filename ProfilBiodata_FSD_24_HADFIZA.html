@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            /* background: linear-gradient(to right, #1a237e, #0d47a1); Gradasi biru gelap */
+            color: #fff;
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory; /* Snap saat scroll */
+            height: 100vh; /* Memastikan body memenuhi tinggi layar */
+        }
+
+        header {
+            background: linear-gradient(to right, #0d47a1, #1a237e, #0b3d91, #000080); /* Intense Blue ke Dark Navy */
+            padding: 20px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1 {
+            font-size: 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: right;
+        }
+
+        nav ul li {
+            margin: 0 13px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        nav ul li a:hover {
+            border-bottom: 2px solid #ffeb3b; /* Warna hover kuning */
+        }
+
+        .kolom-container {
+            display: flex;
+            flex-direction: row-reverse; /* Membuat gambar di sebelah kanan */
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .kolom1 {
+            flex: 1;
+            text-align: left;
+            padding: 20px;
+            list-style: none;
+            font-family: montserrat;
+            font-size: 20px;
+            width: 300px; /* Lebar kotak */
+            height: 300px; /* Tinggi kotak */
+            border: 2px solid #fff; /* Warna dan ukuran border */
+            background-color: rgba(255, 255, 255, 0.1); /* Warna latar belakang dengan transparansi */
+            display: flex; /* Mengatur konten di dalam kotak */
+            justify-content: center; /* Mengatur konten di tengah secara horizontal */
+            align-items: center; /* Mengatur konten di tengah secara vertikal */
+            margin: 20px; /* Jarak antar kotak */
+            border-radius: 10px; /* Sudut yang membulat */
+        }
+
+        .kolom1 ul {
+            list-style: none;
+        }
+
+        .kolom2 img {
+            width: 300px; 
+            height: 300px;
+            border-radius: 50%;
+            padding: 20px;
+        }
+
+        .content {
+            height: 100vh; /* Setiap div menempati 100% tinggi layar */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            scroll-snap-align: start; /* Snap di bagian atas setiap konten */
+            padding: 20px;
+        }
+        
+        /* Menata dua gambar src sejajar */
+        .image-links {
+            display: flex;
+            justify-content: center; /* Mengatur jarak antara elemen */
+            align-items: center;
+            width: 100%;
+            
+        }
+
+        .image-links a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: white; /* Teks berwarna putih */
+            margin: 0 20px; /* Menambah jarak horizontal antar link */
+        }
+
+        .image-links a:hover {
+            border-bottom: 2px solid #0fc22a;
+        }
+
+        .image-links img {
+            width: 50px; /* Ukuran gambar bisa disesuaikan */
+            height: 50px;
+            margin-bottom: 10px;
+        }
+
+        .image-links span {
+            font-size: 1.2rem; /* Ukuran teks */
+            color: white; /* Warna teks putih */
+        }
+
+        #contact h3 {
+            margin-bottom: 20px;
+        }
+
+        .content h2 {
+            margin-bottom: 20px; /* Menambah jarak antara h2 dan elemen di bawahnya */
+        }
+
+        /* Warna latar belakang untuk setiap bagian */
+        #home {
+            background: linear-gradient(to bottom, #001f3f, #002b6b, #003b8e, #004aad); /* Blue Night Sky */
+        }
+
+        #contact {
+            background: linear-gradient(to right, #0d47a1, #1a237e, #0d47a1); /* Gradasi biru lebih gelap dan tajam */
+        }
+
+        #about {
+            background: linear-gradient(to right, #0d47a1, #1a237e, #0d47a1); /* Gradasi biru lebih gelap dan tajam */
+        }
+    
+        h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.5rem;
+            line-height: 1.6;
+        }
+
+        footer {
+            background-color: #0d47a1;
+            padding: 5px 0;
+            text-align: center;
+            color: white;
+            position: relative;
+            z-index: 1000;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 15px;
+        }
+
+        html {
+            scroll-behavior: smooth; /* Scroll yang halus */
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>HDFZA</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div id="home" class="content">
+        <div class="kolom-container">
+            <div class="kolom1">
+                <ul>
+                    <li>Nama : HADFIZA</li>
+                    <li>Program Studi : Pendidikan Komputer</li>
+                    <li>Umur : 20 Tahun</li>
+                    <li>Email : 2210131210012@mhs.ulm.ac.id</li>
+                    <li>No.Telp : +62 857 0582 5523<li>
+                    <li>Deskripsi : Mahasiswa Semester 5 yang bertekad untuk bisa menjadi ahli dalam bidang Programmer</li>
+                </ul>
+            </div>
+            <div class="kolom2">
+                <img src="img/photo.jpg" alt="Gambar Profil">
+            </div>
+        </div>
+    </div>
+
+    <div id="contact" class="content">
+        <h3>Contact Us :</h3>
+        <div class="image-links">
+            <a href="http://wa.me//6285705825523">
+                <img src="img/wa.png" alt="Whatsapp">
+                <span>Whatsapp</span>
+            </a>
+            <a href="https://instagram.com/hd_fzaaa._?igshid=ZDdkNTZiNTM=">
+                <img src="img/ig.png" alt="Instagram">
+                <span>Instagram</span>
+            </a>
+        </div>
+    </div>
+
+    <div id="about" class="content">
+        <h3>About Me</h3></br>
+        <p style="font-size: 20px;">Seorang Mahasiswa Semester 5 Program Studi pendidikan Komputer Universitas Lambung Mangkurat</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Portofolio hdfza. All rights reserved.</p>
+    </footer>
+</body>
+</html>
